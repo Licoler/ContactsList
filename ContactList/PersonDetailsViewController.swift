@@ -9,7 +9,6 @@ import UIKit
 
 class PersonDetailsViewController: UIViewController {
     
-    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
@@ -17,7 +16,8 @@ class PersonDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = person.fullName
+        title = person.fullName
+        
         phoneNumberLabel.text = "Phone: \(person.phone)"
         emailLabel.text = "Email: \(person.email)"
     }
